@@ -39,6 +39,6 @@ class TeamsController < ApplicationController
   private
 
   def team_params
-    params.require(:team).permit(:name, pocket_monster_ids: [])
+    params.require(:team) 
   end
 end
