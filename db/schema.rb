@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_05_13_151606) do
+ActiveRecord::Schema.define(version: 2024_05_13_160453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,10 +25,12 @@ ActiveRecord::Schema.define(version: 2024_05_13_151606) do
   end
 
   create_table "team_pocket_monsters", force: :cascade do |t|
-    t.string "team"
-    t.string "pocket_monster"
+    t.bigint "team_id", null: false
+    t.bigint "pocket_monster_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["pocket_monster_id"], name: "index_team_pocket_monsters_on_pocket_monster_id"
+    t.index ["team_id"], name: "index_team_pocket_monsters_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -37,4 +39,6 @@ ActiveRecord::Schema.define(version: 2024_05_13_151606) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "team_pocket_monsters", "pocket_monsters"
+  add_foreign_key "team_pocket_monsters", "teams"
 end
