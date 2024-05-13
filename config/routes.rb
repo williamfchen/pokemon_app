@@ -8,4 +8,6 @@ Rails.application.routes.draw do
       resources :pokemon, only: :index
     end
   end
+
+  get "/teams", to: "team#index"
 end
