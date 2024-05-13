@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/teams", to: "team#index"
+  get "/teams", to: "teams#index"
 end

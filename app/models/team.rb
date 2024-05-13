@@ -1,3 +1,3 @@
 class Team < ApplicationRecord
-  has many :pocket_monsters
+  has_many :pocket_monsters
 end
