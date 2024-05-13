@@ -4,6 +4,8 @@ class PocketMonster < ApplicationRecord
                         :image,
                         :shiny
 
+  has_many :teams
+
   class << self
     def find_pokemon(poke)
       create(
