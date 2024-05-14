@@ -11,7 +11,7 @@ class TeamsController < ApplicationController
     @team = Team.new(team_params)
 
     if @team.save
-      redirect_to teams_path, notice: "Team createdc successfully"
+      redirect_to teams_path, notice: "Team created successfully"
     else
       render new
     end
@@ -39,6 +39,6 @@ class TeamsController < ApplicationController
   private
 
   def team_params
-    params.require(:team) 
+    params.require(:team).permit(:name)
   end
 end
