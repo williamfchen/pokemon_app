@@ -4,7 +4,7 @@ class PocketMonster < ApplicationRecord
                         :image,
                         :shiny
 
-  has_many :teams
+  has_and_belongs_to_many :teams, join_table: :team_pocket_monsters
 
   class << self
     def find_pokemon(poke)
