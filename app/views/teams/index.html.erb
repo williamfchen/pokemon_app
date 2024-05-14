@@ -1,5 +1,11 @@
-<h1>All Teams</h1>
-
-<% @teams.each do |team| %>
-  <p><%= team.name %></p>
-<% end %>
+<h1>Teams</h1>
+<%= link_to 'New Team', new_team_path %>
+<ul>
+  <% @teams.each do |team| %>
+    <li>
+      <%= team.name %>
+      <%= link_to 'Edit', edit_team_path(team) %>
+      <%= link_to 'Delete', team_path(team), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
