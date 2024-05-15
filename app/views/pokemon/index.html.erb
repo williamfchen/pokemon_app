@@ -20,4 +20,14 @@
       <%= submit_tag "Search" %>
     </div align="center">
   <% end %>
+
+  <%= form_with url: add_pokemon_to_team_path, method: :post, local: true do |form| %>
+    <div align="center">
+      <p>Add <%= @pokemon.name %> to a team:</p>
+      <%= select_tag :team_id, options_from_collection_for_select(Team.all, :id, :name), prompt: 'Select a Team' %>
+      
+      <%= hidden_field_tag :pokemon_id, @pokemon.number %>
+      <%= submit_tag "Add to Team" %>
+    </div>
+  <% end %>
 </div>

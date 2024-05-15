@@ -1,1 +1,14 @@
 <h1><%= @team.name %></h1>
+<%= button_to 'Return to Teams', teams_path, method: :get %>
+<%= button_to "Add Pokemon", root_path, method: :get %>
+
+
+<h2>Pokemon on this Team:</h2>
+<ul>
+  <% @team.pocket_monsters.each do |pokemon| %>
+    <li>
+      <%= image_tag pokemon.image, alt: pokemon.name, class: "pokemon-image" %>
+      <strong><%= pokemon.name %></strong> (Number: <%= pokemon.number %>)
+    </li>
+  <% end %>
+</ul>
