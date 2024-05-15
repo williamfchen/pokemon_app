@@ -18,7 +18,7 @@
   
 ## What it does
 
-> This app will be used to get an introduction to API consumption and refactoring in rails. This project follows Service-Oriented Architecture (SOA) that provides users with Pokemon information based on search parameters that the user provides.
+> This app allows the user to create a team of up to 6 different Pokemon using a search funtion through the Pokémon API.
 
 * Fork and clone this repository. Run bundle install.
 
@@ -42,7 +42,7 @@ visit localhost:3000 in your web browser
 
 ## Dependencies
 
-* This app uses Rails version `5.2.4.4`
+* This app uses Rails version `6.1.4`
 
 * We use the [Faraday Gem](https://github.com/lostisland/faraday) to make calls to our API service.
 
