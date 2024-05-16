@@ -75,6 +75,13 @@ docker-compose up
 
   * Ruby 3.2.2
   * Rails 6.1.4
+
+## Possible Iterations
+  * Add CSS to improve UI
+  * Add edit funtionality to teams
+  * Add delete option to Pokemon on teams
+  * Add Pokemon customization i.e. levels, skills, gender
+  * Add happy and sad pathing
   
 ## Contact
     
